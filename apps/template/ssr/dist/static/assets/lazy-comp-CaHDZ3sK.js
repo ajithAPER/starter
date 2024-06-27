@@ -1,0 +1,1 @@
+import{r as e,j as t}from"./index-DgseT_cP.js";const o=()=>{const r=e.useRef(new Promise(s=>{setTimeout(()=>{s("hai")},1e3)}));return e.use(r.current),t.jsx("div",{children:"I am Lazy"})};export{o as default};

@@ -1,0 +1,12 @@
+{
+  "name": "@repo/template-webapp",
+  "packageManager": "yarn@4.2.2",
+  "private": true,
+  "scripts": {
+    "build:ssr": "yarn workspace @repo/template-webapp-ssr build"
+  },
+  "workspaces": [
+    "ssr",
+    "ui/*"
+  ]
+}

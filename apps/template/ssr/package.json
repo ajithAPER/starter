@@ -1,0 +1,40 @@
+{
+  "name": "@repo/template-webapp-ssr",
+  "packageManager": "yarn@4.2.2",
+  "version": "1.0.0",
+  "description": "Webapp Template",
+  "license": "MIT",
+  "type": "module",
+  "source": "src/main.ts",
+  "scripts": {
+    "build": "yarn build:server && yarn build:client",
+    "build:server": "tsc && vite build --config vite.config.ts --ssr src/main.ts",
+    "build:client": "vite build --config vite.config.ts --ssrManifest --outDir dist/static",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.8",
+    "@nestjs/core": "^10.3.8",
+    "@nestjs/platform-express": "^10.3.8",
+    "@repo/template-app-root": "workspace:*",
+    "express": "^4.19.2",
+    "react": "^19.0.0-rc-6d3110b4d9-20240531",
+    "react-dom": "^19.0.0-rc-6d3110b4d9-20240531",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.13",
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.12",
+    "vite-plugin-node": "^3.1.0"
+  },
+  "overrides": {
+    "@types/react-dom": "npm:types-react-dom@rc",
+    "@types/react": "npm:types-react@rc"
+  }
+}

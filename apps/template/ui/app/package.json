@@ -1,0 +1,28 @@
+{
+  "name": "@repo/template-app-root",
+  "packageManager": "yarn@4.2.2",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "exports": {
+    ".": "./src/app.tsx"
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "src/app.tsx"
+      ]
+    }
+  },
+  "dependencies": {
+    "react": "^19.0.0-rc-6d3110b4d9-20240531"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/react": "npm:types-react@rc",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.12"
+  }
+}
